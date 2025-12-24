@@ -26,6 +26,7 @@ class CartService:
     
     @staticmethod
     def get_cart_items(user):
+        
         """Get all cart items for a user"""
         return Cart.objects.filter(user=user).select_related('product')
     
